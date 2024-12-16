@@ -29,6 +29,12 @@
                     <option value='all'>Seleccionar categoría</option>
                 </select>
             </div>
+
+            <!-- AGREGADO -->
+            <div class="flex items-center">
+                <input type="text" id="search-input" placeholder="Buscar productos..." class="bg-white text-gray-900 px-6 py-3 rounded hover:bg-gray-300 shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-gray-500">
+            </div>
+            
             <a href="/pages/private/cart/cart.html">
                 <button id="cart-btn" class="bg-white text-gray-900 px-6 py-3 rounded hover:bg-gray-300 shadow-lg transition-all">
                     Mi Carrito
@@ -44,6 +50,21 @@
                 <!-- Aquí irán los productos -->
                 
             </div>
+
+            <div id="notification" class="fixed top-15 left-0 right-0 bg-blue-600 text-white text-center p-4 hidden">
+                ¡Nuevos productos en oferta! ¡Mira nuestras últimas novedades!
+            </div>
+
+            <!-- Comentarios -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold">Deja un comentario</h3>
+                <textarea id="comment-input" class="w-full p-4 border rounded mt-2" rows="4" placeholder="Escribe tu comentario..."></textarea>
+                <button id="submit-comment" class="bg-blue-500 text-white px-6 py-2 mt-4 rounded hover:bg-blue-600">Agregar Comentario</button>
+            
+                <div id="comments-list" class="mt-6 space-y-4">
+                    <!-- Aquí se mostrarán los comentarios dinámicamente -->
+                </div>
+            </div>            
         </main>
         <script type="module" src="/pages/private/home/index.controller.js"></script>
     </body>
